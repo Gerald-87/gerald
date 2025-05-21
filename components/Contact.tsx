@@ -2,7 +2,7 @@
 
 import { useForm, SubmitHandler } from 'react-hook-form';
 import SectionHeading from './SectionHeading';
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
 
 interface FormData {
   name: string;
@@ -56,7 +56,6 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4">
         <SectionHeading
           title="$ ./contact_form --init"
-          titleClassName="text-[#00ff00] font-mono"
           description={
             <span className="text-[#00ff00]/80 font-mono">
               Initializing secure communication channel
@@ -144,5 +143,6 @@ const Contact = () => {
     </section>
   );
 };
+
 
 export default Contact;
