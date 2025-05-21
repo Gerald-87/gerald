@@ -1,0 +1,39 @@
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.terminal {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.terminalText {
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), cursor-blink 0.75s step-end infinite;
+  border-right: 0.15em solid #00ff00;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
+
+.prompt {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  margin-right: 0.5rem;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
